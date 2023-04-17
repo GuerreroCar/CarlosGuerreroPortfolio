@@ -1,23 +1,21 @@
 {
-  "name": "match-maker",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "abbrev",
+  "version": "1.1.1",
+  "description": "Like ruby's abbrev module, but in js",
+  "author": "Isaac Z. Schlueter <i@izs.me>",
+  "main": "abbrev.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "tap test.js --100",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://ca-isp-learners-gitlab.tlm.cloud/carlos-guerrero-g18772/match-maker.git"
-  },
-  "keywords": [],
-  "author": "",
+  "repository": "http://github.com/isaacs/abbrev-js",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.0",
-    "express": "^4.18.1",
-    "nodemon": "^2.0.19",
-    "path": "^0.12.7"
-  }
+  "devDependencies": {
+    "tap": "^10.1"
+  },
+  "files": [
+    "abbrev.js"
+  ]
 }
